@@ -10,23 +10,26 @@
 </head>
 
 <body>
-    <H1>安安黃皓</H1>
+    <H1>appapp</H1>
     <button onclick="login()">登入LINE</button>
-    <script>var liffId = '<1657887101-WAvjZaDY>';
+    <script>
+        var liffId = '<1657887101-WAvjZaDY>';
         liff.init({
             liffId: liffId, // Use own liffId
         })
             .then(() => {
                 // start to use LIFF's api
                 var islogin = liff.isLoggedIn()
-                console.log('islogin',islogin);
+                console.log('islogin', islogin);
             })
             .catch((err) => {
                 console.log(err);
             });
+
         function login() {
-            liff.login({ redirectUri: "<https://yellow-sand-0a5260900.2.azurestaticapps.net>" }); 
+            liff.login({ redirectUri: "<https://yellow-sand-0a5260900.2.azurestaticapps.net>" });
         }
+        
     </script>
 </body>
 
