@@ -5,31 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>line life APP BOT</title>
+    <title>Line Login Demo</title>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 
 <body>
-    <H1>點下方按鈕</H1>
-    <button onclick="login()">登入LINE前往計畫官網GO!</button>
+    <h1>Line Login Demo</h1>
+    <div id="line-login-btn"></div>
     <script>
-        var liffId = '1657887101-WAvjZaDY';
+        // Set the LIFF ID and initialize LIFF
+        const liffId = 'YOUR_LIFF_ID';
         liff.init({
-            liffId: liffId, // Use own liffId
-        })
-            .then(() => {
-                // start to use LIFF's api
-                var islogin = liff.isLoggedIn()
-                console.log('islogin', islogin);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-
-        function login() {
-            liff.login({ redirectUri: "https://www.198.org.tw/" });
-        }
-        
+            liffId: liffId
+        }).then(() => {
+            // Check if the user is logged in or not
+            if (!liff.isLoggedIn()) {
+                // Show the login button if the user is not logged in
+                const loginBtn = document.createElement('button');
+                loginBtn.innerText = 'Login with Line';
+                loginBtn.addEventListener('click', () => {
+                    liff.login({ redirectUri: window.location.href });
+                });
+                document.getElementById('line-login-btn').appendChild(loginBtn);
+            } else {
+                // Get the access token and display the user's profile
+                const accessToken = liff.getAccessToken();
+                liff.getProfile().then(profile => {
+                    const profileImg = document.createElement('img');
+                    profileImg.src = profile.pictureUrl;
+                    const profileName = document.createElement('p');
+                    profileName.innerText = `Hello, ${profile.displayName}!`;
+                    document.body.appendChild(profileImg);
+                    document.body.appendChild(profileName);
+                });
+            }
+        }).catch(err => {
+            console.log(err);
+        });
     </script>
 </body>
 
