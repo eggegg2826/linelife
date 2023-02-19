@@ -3,46 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Login Demo</title>
-    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>關於數位共好Q&A</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 0 0 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .post {
+            margin-bottom: 20px;
+        }
+
+        .post h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Line Login Demo</h1>
-    <div id="line-login-btn"></div>
-    <script>
-        // Set the LIFF ID and initialize LIFF
-        const liffId = '1657887101-WAvjZaDY';
-        liff.init({
-            liffId: liffId
-        }).then(() => {
-            // Check if the user is logged in or not
-            if (!liff.isLoggedIn()) {
-                // Show the login button if the user is not logged in
-                const loginBtn = document.createElement('button');
-                loginBtn.innerText = 'Login with Line';
-                loginBtn.addEventListener('click', () => {
-                    liff.login({ redirectUri: window.location.href });
-                });
-                document.getElementById('line-login-btn').appendChild(loginBtn);
-            } else {
-                // Get the access token and display the user's profile
-                const accessToken = liff.getAccessToken();
-                liff.getProfile().then(profile => {
-                    const profileImg = document.createElement('img');
-                    profileImg.src = profile.pictureUrl;
-                    const profileName = document.createElement('p');
-                    profileName.innerText = `Hello, ${profile.displayName}!`;
-                    document.body.appendChild(profileImg);
-                    document.body.appendChild(profileName);
-                });
-            }
-        }).catch(err => {
-            console.log(err);
-        });
-    </script>
+    <div class="container">
+        <h1>數位共好計畫Q&A</h1>
+        <div class="post">
+            <h2>公告</h2>
+            <p>公司將於6月1日至6月10日暫停營業。</p>
+            <p>期間客服將無法接聽電話，敬請見諒。</p>
+        </div>
+        <div class="post">
+            <h2>招聘</h2>
+            <p>本公司現誠聘一位網頁設計師。</p>
+            <p>有意者請寄送履歷至 hr@company.com。</p>
+        </div>
+        <div class="post">
+            <h2>更新</h2>
+            <p>我們的網站現在支援多種語言。</p>
+            <p>使用者現在可以切換語言瀏覽我們的網站。</p>
+        </div>
+    </div>
 </body>
 
 </html>
