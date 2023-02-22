@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>關於數位共好Q&A</title>
-    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -98,25 +97,6 @@
             <p>答:若是原有客戶，導入相同的雲工具商品服務，就不能算是共好計畫輔導導入的小微企業，包含續約客戶。</p>
         </div>
     </div>
-
-    <script>
-        var liffId = '1657887101-1DxD04M9';
-            liff.init({
-                liffId: liffId, // Use own liffId
-            })
-            .then(() => {
-                // start to use LIFF's api
-                var islogin = liff.isLoggedIn()
-                console.log(islogin);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-        
-        function login() {
-            liff.login({ redirectUri: "https://yellow-sand-0a5260900.2.azurestaticapps.net" });
-        }
-        </script>
 </body>
-
+    
 </html>
