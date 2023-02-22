@@ -100,9 +100,6 @@
     </div>
 
     <script>
-        function login() {
-            liff.login({ redirectUri: "https://liff.line.me/1657887101-1DxD04M9" });
-        }
         var liffId = '1657887101-1DxD04M9';
             liff.init({
                 liffId: liffId, // Use own liffId
@@ -115,6 +112,10 @@
             .catch((err) => {
                 console.log(err);
             });
+        
+        function login() {
+            liff.login({ redirectUri: "https://liff.line.me/1657887101-1DxD04M9" });
+        }
         </script>
 </body>
 
