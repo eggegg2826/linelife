@@ -14,94 +14,131 @@
         }
 
         .container {
-            max-width: 600px;  /*左右兩邊的縮排*/
+            max-width: 600px;
+            /*左右兩邊的縮排*/
             margin: 0 auto;
-            padding: 20px; /*上下兩邊的縮排*/
+            padding: 20px;
+            /*上下兩邊的縮排*/
         }
 
         h1 {
             text-align: center;
-            margin-top: 0;
+            margin-top: 45;
         }
-        
+
         h3 {
             text-align: center;
+            font-size: 20px;
             margin-top: 0;
         }
 
         p {
             line-height: 1.5;
-            margin: 0 0 20px;  /*每一個QA的間距*/
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0; /*感覺沒意義*/
-        }
-
-        li {
-            margin-bottom: 10px; /*感覺沒意義*/
-        }
-
-        li span {
-            font-weight: bold;
-            margin-right: 10px;  /*感覺沒意義*/
+            margin: 0 0 20px;
+            /*每一個QA的間距*/
         }
 
         .post {
-            margin-bottom: 20px; /*每一個QA的間距*/
+            margin-bottom: 20px;
+            /*每一個QA的間距*/
         }
 
         .post h2 {
             margin-top: 0;
-            margin-bottom: 10px; /*Q與A的間距*/
+            margin-bottom: 10px;
+            /*Q與A的間距*/
             font-size: 20px;
+        }
+
+        /*上方模板*/
+        .bulletin-board {
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+        }
+
+        /*按鈕*/
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .postt {
+            text-align: center;
+            margin-top: 0;
         }
     </style>
 </head>
 
 <body>
-     <div class="container">
-        <h1>數位共好計畫Q&A</h1>
-        <div class="post">
-            <h2>Q1.誰具有提案資格?</h2>
-            <p>答:1.雲端服務供應商獨立提案或結合依法設立之公司、登記有案之法人、在地組織提案。<br>2.依法設立之公司、登記有案之法人、在地組織結合雲端服務供應商提案。<br>3.上述雲端服務供應商須符合數位發展部數位產業署<a href="https://cisatw365.pse.is/4rql5h">「引領中小微型企業數位轉型戰略攻頂計畫補助作業」</a>雲端解決方案申請須知。<br>4.提案單位須提出與合作單位之計畫合作意向書。</p>
+    <div class="container">
+        <div class="bulletin-board">
+            <div class="postt">
+                <h3>112年數位共好計畫提案說明會</h3>
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FUneedIcare%2Fvideos%2F6320375884662247%2F&show_text=false&width=560&t=0"
+                    width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true">
+                </iframe>
+            </div>
         </div>
-        <div class="post">
-            <h2>Q2.小微企業如果曾參加過雲世代相關計畫，今年還可以提共好計畫嗎?</h2>
-            <p>答:無法提共好計畫，相關雲世代計畫只能參與一次而已，可以透過雲市集輸入企業統編查詢是否有參與過相關計畫，詳細請參考<a href="https://www.tcloud.gov.tw/sme-application">台灣雲市集</a>。</p>
+        <div id="header">
+            <h1>數位共好計畫Q&A</h1>
         </div>
-        <div class="post">
-            <h2>Q3.受輔導的企業在雲工具上是否有主軸方針建議?</h2>
-            <p>答:主要以9人以下企業為輔導對象，請以自身的產品，找尋適合的企業。</p>
+        <div class="bulletin-board">
+            <div class="post">
+                <h2>Q1.誰具有提案資格?</h2>
+                <p>答:1.雲端服務供應商獨立提案或結合依法設立之公司、登記有案之法人、在地組織提案。<br>2.依法設立之公司、登記有案之法人、在地組織結合雲端服務供應商提案。<br>3.上述雲端服務供應商須符合數位發展部數位產業署<a
+                        href="https://cisatw365.pse.is/4rql5h">「引領中小微型企業數位轉型戰略攻頂計畫補助作業」</a>雲端解決方案申請須知。<br>4.提案單位須提出與合作單位之計畫合作意向書。
+                </p>
+            </div>
+            <div class="post">
+                <h2>Q2.小微企業如果曾參加過雲世代相關計畫，今年還可以提共好計畫嗎?</h2>
+                <p>答:無法提共好計畫，相關雲世代計畫只能參與一次而已，可以透過雲市集輸入企業統編查詢是否有參與過相關計畫，詳細請參考<a
+                        href="https://www.tcloud.gov.tw/sme-application">台灣雲市集</a>。</p>
+            </div>
+            <div class="post">
+                <h2>Q3.受輔導的企業在雲工具上是否有主軸方針建議?</h2>
+                <p>答:主要以9人以下企業為輔導對象，請以自身的產品，找尋適合的企業。</p>
+            </div>
+            <div class="post">
+                <h2>Q4.參與數位共好計畫一定要上架到雲市集上嗎?</h2>
+                <p>答:不一定。假設有在雲市集上架，在提案可以提供雲市集審核通過的內容。提案工具若未上架雲市集，須提供雲工具介紹且符合<a
+                        href="https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E">規範</a>中的『雲端服務條件』。
+                </p>
+            </div>
+            <div class="post">
+                <h2>Q5.以前就已經有導入過本公司雲工具的小微企業且有簽約，這些小微企業現在還能加入數位共好計畫嗎?</h2>
+                <p>答:受輔導企業若為雲端服務供應商之既有客戶，導入之服務必須為新購使用項目。</p>
+            </div>
+            <div class="post">
+                <h2>Q6.預算核定流程為何?</h2>
+                <p>答:申請入案通過後就會核定預算，主要分三期款核撥，簽約後核撥第一期款(經費30%)，期中審查撥第二期款(經費30%)，期末審查通過核撥第三期款(經費40%)。</p>
+            </div>
+            <div class="post">
+                <h2>Q7.在共好計畫中，對小微企業所使用的雲工具功能是否能不一樣?</h2>
+                <p>答:可以，並沒有特別限制。</p>
+            </div>
+            <div class="post">
+                <h2>Q8.若成功入案，受輔導企業最晚導入雲工具的時間點為何?</h2>
+                <p>答:需要有完整的四個月流量，數位共好計畫結案日為當年度11/30，請提案單位自行斟酌導入雲工具時間。</p>
+            </div>
+            <div class="post">
+                <h2>計畫常見Q&A保留隨時修改、變更之權利，詳細內容請以<a
+                        href="https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E">112年度「中小企業數位共好計畫」推動企業數位共好計畫提案作業規範</a>為準
+                </h2>
+            </div>
         </div>
-        <div class="post">
-            <h2>Q4.參與數位共好計畫一定要上架到雲市集上嗎?</h2>
-            <p>答:不一定。假設有在雲市集上架，在提案可以提供雲市集審核通過的內容。提案工具若未上架雲市集，須提供雲工具介紹且符合<a href="https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E">規範</a>中的『雲端服務條件』。</p>
-        </div>
-        <div class="post">
-            <h2>Q5.以前就已經有導入過本公司雲工具的小微企業且有簽約，這些小微企業現在還能加入數位共好計畫嗎?</h2>
-            <p>答:受輔導企業若為雲端服務供應商之既有客戶，導入之服務必須為新購使用項目。</p>
-        </div>
-        <div class="post">
-            <h2>Q6.預算核定流程為何?</h2>
-            <p>答:申請入案通過後就會核定預算，主要分三期款核撥，簽約後核撥第一期款(經費30%)，期中審查撥第二期款(經費30%)，期末審查通過核撥第三期款(經費40%)。</p>
-        </div>
-        <div class="post">
-            <h2>Q7.在共好計畫中，對小微企業所使用的雲工具功能是否能不一樣?</h2>
-            <p>答:可以，並沒有特別限制。</p>
-        </div>
-        <div class="post">
-            <h2>Q8.若成功入案，受輔導企業最晚導入雲工具的時間點為何?</h2>
-            <p>答:需要有完整的四個月流量，數位共好計畫結案日為當年度11/30，請提案單位自行斟酌導入雲工具時間。</p>
-        </div>
-        <div class="post">
-            <h2>計畫常見Q&A保留隨時修改、變更、終止之權利，詳細內容請以<a href="https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E">112年度「中小企業數位共好計畫」推動企業數位共好計畫提案作業規範</a>為準</h2>
-        </div>   
-        
     </div>
-    
+
 </body>
-    
+
 </html>
