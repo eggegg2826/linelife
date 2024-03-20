@@ -148,7 +148,7 @@
         </div>
         <div class="bulletin-board">
             <div class="post">
-                <h2 id="question1" onclick="toggleAnswer('answer1'); trackClick('Question 1')">Q1.誰具有提案資格?</h2>
+                <h2 id="question1" onclick="toggleAnswer('answer1', 'Question1')">Q1.誰具有提案資格?</h2>
                 <p id="answer1" style="display: none;">
                     符合「中小企業認定標準」所稱之中小企業、公私立大專校院、法人組織等。<br>
                     提案單位需提供以下資格文件:<br>
@@ -158,13 +158,13 @@
                 </p>
             </div>
             <div class="post">
-                <h2 id="question2" onclick="toggleAnswer('answer2'); trackClick('Question 2')">Q2.受輔導單位如果「曾」參加過「雲世代相關計畫」，今年可以參與數位共好計畫嗎?</h2>
+                <h2 id="question2" onclick="toggleAnswer('answer2', 'Question2')">Q2.受輔導單位如果「曾」參加過「雲世代相關計畫」，今年可以參與數位共好計畫嗎?</h2>
                 <p id="answer2" style="display: none;">可以參與。但請注意，若受輔導單位「本年度」參與「雲世代相關計畫」且5年內連續2年參與經濟部中小及新創企業署輔導計畫者，不可參與數位共好計畫。<br>
                     其他詳細受輔導企業資格請參考<a href="https://www.cisanet.org.tw/Project/Detail/1165">申請須知</a>中的P.2『受輔導企業資格』。
                 </p>
             </div>
             <div class="post">
-                <h2 id="question3" onclick="toggleAnswer('answer3'); trackClick('Question 3')">Q3.我需要在提案前就把受輔導企業同意書(MOU)都簽訂完成嗎?</h2>
+                <h2 id="question3" onclick="toggleAnswer('answer3', 'Question3')">Q3.我需要在提案前就把受輔導企業同意書(MOU)都簽訂完成嗎?</h2>
                 <p id="answer3" style="display: none;">依照提案類型有不同的規定，此案為競爭型提案，資料愈完整，委員審查評分愈高。<br>
                     申請數位基盤類計畫時:<br>
                     須提出預定受輔導企業彙總表，及提供至少10%參與業者之受輔導企業同意書，其提案所提供之同意書，入案後抽換比例不得超過50%。<br>
@@ -175,24 +175,24 @@
                 </p>
             </div>
             <div class="post">
-                <h2 id="question4" onclick="toggleAnswer('answer4'); trackClick('Question 4')">Q4.預計提案的通路平台可以上架到自有平台嗎?若無法串接API怎麼辦?</h2>
+                <h2 id="question4" onclick="toggleAnswer('answer4', 'Question4')">Q4.預計提案的通路平台可以上架到自有平台嗎?若無法串接API怎麼辦?</h2>
                 <p id="answer4" style="display: none;">可以上架到自有平台，但須提供API串接至本會戰情室，在計畫過程中我們會於戰情室即時查看目前訂單數與營業額，詳細串接項目請參考<a href="https://drive.google.com/file/d/1YCrKWHeIhIIxB8KJP9wryt_LkUNnTyZk/view?usp=sharing">API串接項目</a>。
                     若自有平台因技術問題無法串接API，本會今年有與iOPEN Mall、KKDAY合作，產品屬性如適合可上架至該平台，就不須考量API串接問題。
                 </p>
             </div>
             <div class="post">
-                <h2 id="question5" onclick="toggleAnswer('answer5'); trackClick('Question 5')">Q5.我想要提案，我該去哪裡進行呢?</h2>
+                <h2 id="question5" onclick="toggleAnswer('answer5', 'Question5')">Q5.我想要提案，我該去哪裡進行呢?</h2>
                 <p id="answer5" style="display: none;">提案採<a href="https://www.cisa.tw/365/login/index.php">線上繳件</a>請利用網際網路連線至本會之提案系統網址，依操作程序上傳提案計畫書及其他應備資料。<br>
                     若您從未申請過帳號，請於下方點選「申請新帳號」。
                 </p>
             </div>
             <div class="post">
-                <h2 id="question6" onclick="toggleAnswer('answer6'); trackClick('Question 6')">Q6.關於計畫書內職級的部分該如何填寫?</h2>
+                <h2 id="question6" onclick="toggleAnswer('answer6', 'Question6')">Q6.關於計畫書內職級的部分該如何填寫?</h2>
                 <p id="answer6" style="display: none;">請提案單位計畫人力依學歷經驗去做職級區分，相關職級表請參考<a href="https://drive.google.com/file/d/1jkVuMxLb3mLHepsYB2JIh1UPXy0Ce7ef/view?usp=sharing">人事費職級與編列原則</a>填寫。<br>
                 </p>
             </div>
             <div class="post">
-                <h2 id="question7" onclick="toggleAnswer('answer7'); trackClick('Question 7')">Q7.預算核定流程為何?</h2>
+                <h2 id="question7" onclick="toggleAnswer('answer7', 'Question7')">Q7.預算核定流程為何?</h2>
                 <p id="answer7" style="display: none;">申請入案通過後即核定預算，主要分三期款核撥，簽約後核撥第一期款(經費30%)，期中審查撥第二期款(經費30%)，期末審查通過核撥第三期款(經費40%)。</p>
             </div>
             <div class="post">
@@ -203,23 +203,22 @@
     </div>
 
     <script>
-        function toggleAnswer(answerId) {
+        function toggleAnswer(answerId, question) {
             var answer = document.getElementById(answerId);
             if (answer.style.display === "none") {
                 answer.style.display = "block";
+                trackClick(question); // 在展開答案時觸發點擊事件
             } else {
                 answer.style.display = "none";
             }
         }
-    </script>
 
-    <script>
         // JavaScript函數，用於追蹤點擊事件
         function trackClick(question) {
-        gtag('event', 'click', {
-            'event_category': 'QA Click',
-            'event_label': question
-        });
+            gtag('event', 'click', {
+                'event_category': 'QA Click',
+                'event_label': question
+            });
         }
     </script>
 
