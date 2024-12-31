@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>數位共好計畫Q&A</title>
+    <meta name="description" content="113年數位共好計畫的提案資格、流程及常見問題解答，幫助您輕鬆掌握申請須知。">
+    <title>數位共好計畫 Q&A | 常見問題解答</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKK23F60KS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-GKK23F60KS');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-GKK23F60KS');
     </script>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -24,56 +27,52 @@
 
         .container {
             max-width: 600px;
-            /*左右兩邊的縮排*/
             margin: 0 auto;
             padding: 20px;
-            /*上下兩邊的縮排*/
         }
 
         h1 {
             text-align: center;
-            margin-top: 45;
-            font-size: 30px; /* 調整 h1 標題的字體大小 */
+            margin-top: 45px;
+            font-size: 30px;
         }
 
         h2 {
             cursor: pointer;
             padding: 8px;
-            background-color: #0abab5; /* 添加背景顏色 */
-            color: white; /* 文字顏色 */
-            display: block; /* 讓h2元素在一行內顯示 */
-            border-radius: 5px; /* 設置圓角半徑 */
+            background-color: #0abab5;
+            color: white;
+            display: block;
+            border-radius: 5px;
             font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
-        h3 {
-            text-align: center;
-            font-size: 20px;
-            margin-top: 0;
+        h2:hover {
+            background-color: #008f87;
         }
-
-        h4 {
-            font-size: 16px;
-            margin-top: 0;
-        }
-
 
         p {
             line-height: 1.5;
             margin: 0 0 20px;
-            padding: 10px; /* 添加內邊距 */
-            background-color: white; /* 設置背景色為白色 */
-            border-radius: 10px; /* 設置圓角半徑 */
-        
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        p.active {
+            max-height: 1000px;
+            opacity: 1;
         }
 
         .post {
             margin-bottom: 20px;
-            /*每一個QA的間距*/
         }
-        
 
-        /*上方模板*/
         .bulletin-board {
             padding: 20px;
             border: 2px solid #ccc;
@@ -81,7 +80,6 @@
             background-color: #f7f7f7;
         }
 
-        /*按鈕*/
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -92,37 +90,37 @@
             cursor: pointer;
         }
 
-        .postt {
-            text-align: center;
-            margin-top: 0;
-        }
-
         .video-container {
-
             position: relative;
-
             padding-bottom: 56.25%;
-
-            padding-top: 30px;
-
             height: 0;
-
             overflow: hidden;
-
         }
 
-        .video-container iframe,
-        .video-container object,
-        .video-container embed {
-
+        .video-container iframe {
             position: absolute;
-
             top: 0;
             left: 0;
-
             width: 100%;
-
             height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -134,11 +132,11 @@
                 <h3>113年數位共好輔導提案說明會線上版</h3>
                 <div class="video-container">
                     <iframe
+                        loading="lazy"
                         src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fcisa365%2Fvideos%2F378742211784674%2F&show_text=false&width=560&t=0"
                         width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                         allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                        allowFullScreen="true">
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                     </iframe>
                 </div>
             </div>
@@ -147,57 +145,37 @@
             <h1>數位共好計畫常見Q&A</h1>
         </div>
         <div class="bulletin-board">
+            <!-- 申請文件類 -->
+            <h2>申請文件類</h2>
             <div class="post">
-                <h2 id="question1" onclick="toggleAnswer('answer1'); trackClick('Question 1')">Q1.誰具有提案資格?</h2>
-                <p id="answer1" style="display: none;">
-                    符合「中小企業認定標準」所稱之中小企業、公私立大專校院、法人組織等。<br>
-                    提案單位需提供以下資格文件:<br>
-                    1.立案證明。<br>
-                    2.營業稅或所得稅納稅證明(二者擇一)。<br>
-                    詳細請參考<a href="https://www.cisanet.org.tw/Project/Detail/1165">申請須知</a>中的P.2、P.7『申請資格與應備資料』。
-                </p>
+                <h2 id="doc1" onclick="toggleAnswer('doc1Answer'); trackClick('Doc 1')">Q1.需要提供哪些申請文件？</h2>
+                <p id="doc1Answer">需要提供立案證明、營業稅或所得稅納稅證明等文件。詳細請參考<a href="https://www.cisanet.org.tw/Project/Detail/1165">申請須知</a>中的相關內容。</p>
             </div>
             <div class="post">
-                <h2 id="question2" onclick="toggleAnswer('answer2'); trackClick('Question 2')">Q2.受輔導單位如果「曾」參加過「雲世代相關計畫」，今年可以參與數位共好計畫嗎?</h2>
-                <p id="answer2" style="display: none;">可以參與。但請注意，若受輔導單位「本年度」參與「雲世代相關計畫」且5年內連續2年參與經濟部中小及新創企業署輔導計畫者，不可參與數位共好計畫。<br>
-                    其他詳細受輔導企業資格請參考<a href="https://www.cisanet.org.tw/Project/Detail/1165">申請須知</a>中的P.2『受輔導企業資格』。
-                </p>
+                <h2 id="doc2" onclick="toggleAnswer('doc2Answer'); trackClick('Doc 2')">Q2.申請文件是否可以補件？</h2>
+                <p id="doc2Answer">可以在申請截止日前補件，逾期補件將不受理。</p>
+            </div>
+
+            <!-- 審查資格類 -->
+            <h2>審查資格類</h2>
+            <div class="post">
+                <h2 id="qual1" onclick="toggleAnswer('qual1Answer'); trackClick('Qual 1')">Q1.哪些企業具備申請資格？</h2>
+                <p id="qual1Answer">符合中小企業認定標準的企業、公私立大專校院及法人組織均具備資格。</p>
             </div>
             <div class="post">
-                <h2 id="question3" onclick="toggleAnswer('answer3'); trackClick('Question 3')">Q3.我需要在提案前就把受輔導企業同意書(MOU)都簽訂完成嗎?</h2>
-                <p id="answer3" style="display: none;">依照提案類型有不同的規定，此案為競爭型提案，資料愈完整，委員審查評分愈高。<br>
-                    申請數位基盤類計畫時:<br>
-                    須提出預定受輔導企業彙總表，及提供至少10%參與業者之受輔導企業同意書，其提案所提供之同意書，入案後抽換比例不得超過50%。<br>
-                    申請通路拓展類計畫時:<br>
-                    須提供受輔導企業同意書及彙總表。<br>
-                    ※提醒您受輔導企業同意書(MOU)須填寫完整，您可以點選<a href="https://drive.google.com/file/d/1OMgHxWBYl8p2QuQQYgV8gfNJVzvCUmL9/view?usp=sharing">範例</a>參考。<br>
-                    詳細請參考<a href="https://www.cisanet.org.tw/Project/Detail/1165">申請須知</a>中的P.6、P.10『申請作業注意事項與審查作業』。
-                </p>
+                <h2 id="qual2" onclick="toggleAnswer('qual2Answer'); trackClick('Qual 2')">Q2.若曾參與其他計畫，是否能申請？</h2>
+                <p id="qual2Answer">可以，但若連續兩年參與經濟部中小企業相關計畫，則不符合資格。</p>
+            </div>
+
+            <!-- 作業流程類 -->
+            <h2>作業流程類</h2>
+            <div class="post">
+                <h2 id="proc1" onclick="toggleAnswer('proc1Answer'); trackClick('Proc 1')">Q1.提案流程是什麼？</h2>
+                <p id="proc1Answer">請至提案系統完成線上繳件，包含上傳計畫書及應備文件。</p>
             </div>
             <div class="post">
-                <h2 id="question4" onclick="toggleAnswer('answer4'); trackClick('Question 4')">Q4.預計提案的通路平台可以上架到自有平台嗎?若無法串接API怎麼辦?</h2>
-                <p id="answer4" style="display: none;">可以上架到自有平台，但須提供API串接至本會戰情室，在計畫過程中我們會於戰情室即時查看目前訂單數與營業額，詳細串接項目請參考<a href="https://drive.google.com/file/d/1YCrKWHeIhIIxB8KJP9wryt_LkUNnTyZk/view?usp=sharing">API串接項目</a>。
-                    若自有平台因技術問題無法串接API，本會今年有與iOPEN Mall、KKDAY合作，產品屬性如適合可上架至該平台，就不須考量API串接問題。
-                </p>
-            </div>
-            <div class="post">
-                <h2 id="question5" onclick="toggleAnswer('answer5'); trackClick('Question 5')">Q5.我想要提案，我該去哪裡進行呢?</h2>
-                <p id="answer5" style="display: none;">提案採<a href="https://www.cisa.tw/365/login/index.php">線上繳件</a>請利用網際網路連線至本會之提案系統網址，依操作程序上傳提案計畫書及其他應備資料。<br>
-                    若您從未申請過帳號，請於下方點選「申請新帳號」。
-                </p>
-            </div>
-            <div class="post">
-                <h2 id="question6" onclick="toggleAnswer('answer6'); trackClick('Question 6')">Q6.關於計畫書內職級的部分該如何填寫?</h2>
-                <p id="answer6" style="display: none;">請提案單位計畫人力依學歷經驗去做職級區分，相關職級表請參考<a href="https://drive.google.com/file/d/1jkVuMxLb3mLHepsYB2JIh1UPXy0Ce7ef/view?usp=sharing">人事費職級與編列原則</a>填寫。<br>
-                </p>
-            </div>
-            <div class="post">
-                <h2 id="question7" onclick="toggleAnswer('answer7'); trackClick('Question 7')">Q7.預算核定流程為何?</h2>
-                <p id="answer7" style="display: none;">申請入案通過後即核定預算，主要分三期款核撥，簽約後核撥第一期款(經費30%)，期中審查撥第二期款(經費30%)，期末審查通過核撥第三期款(經費40%)。</p>
-            </div>
-            <div class="post">
-                <h4>計畫Q&A提供簡易答覆，詳細內容請以<a href="https://www.cisanet.org.tw/Project/Detail/1165">113年【中小企業數位共好計畫】推動企業數位共好輔導申請須知</a>為準
-                </h4>
+                <h2 id="proc2" onclick="toggleAnswer('proc2Answer'); trackClick('Proc 2')">Q2.審查流程如何進行？</h2>
+                <p id="proc2Answer">審查分為初審與複審，依評分標準進行審查並通知結果。</p>
             </div>
         </div>
     </div>
@@ -205,24 +183,16 @@
     <script>
         function toggleAnswer(answerId) {
             var answer = document.getElementById(answerId);
-            if (answer.style.display === "none") {
-                answer.style.display = "block";
-            } else {
-                answer.style.display = "none";
-            }
+            answer.classList.toggle('active');
         }
-    </script>
 
-    <script>
-        // JavaScript函數，用於追蹤點擊事件
         function trackClick(question) {
-        gtag('event', 'click', {
-            'event_category': 'QA Click',
-            'event_label': question
-        });
+            gtag('event', 'click', {
+                'event_category': 'QA Interaction',
+                'event_label': question
+            });
         }
     </script>
-
 </body>
 
 </html>
