@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="113年數位共好計畫的提案資格、流程及常見問題解答，幫助您輕鬆掌握申請須知。">
-    <title>數位共好計畫 Q&A | 常見問題解答</title>
+    <title>上架SME AI平台Q&A</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKK23F60KS"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-GKK23F60KS');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GKK23F60KS');
     </script>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -45,11 +41,26 @@
             display: block;
             border-radius: 5px;
             font-size: 16px;
-            transition: background-color 0.3s ease;
         }
 
-        h2:hover {
-            background-color: #008f87;
+        h3 {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        h5 {
+            padding: 8px;
+            color: black;
+            display: block;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 2px;
         }
 
         p {
@@ -58,15 +69,6 @@
             padding: 10px;
             background-color: white;
             border-radius: 10px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
-            opacity: 0;
-        }
-
-        p.active {
-            max-height: 1000px;
-            opacity: 1;
         }
 
         .post {
@@ -90,37 +92,27 @@
             cursor: pointer;
         }
 
+        .postt {
+            text-align: center;
+            margin-top: 0;
+        }
+
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
+            padding-top: 30px;
             height: 0;
             overflow: hidden;
         }
 
-        .video-container iframe {
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 14px;
-            }
-
-            p {
-                font-size: 14px;
-            }
         }
     </style>
 </head>
@@ -129,53 +121,87 @@
     <div class="container">
         <div class="bulletin-board">
             <div class="postt">
-                <h3>113年數位共好輔導提案說明會線上版</h3>
+                <h3>AI轉型資源說明會線上版</h3>
                 <div class="video-container">
                     <iframe
-                        loading="lazy"
                         src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fcisa365%2Fvideos%2F378742211784674%2F&show_text=false&width=560&t=0"
                         width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                         allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        allowFullScreen="true">
                     </iframe>
                 </div>
             </div>
         </div>
+
         <div id="header">
-            <h1>數位共好計畫常見Q&A</h1>
+            <h1>上架SMEAI平台常見Q&A</h1>
         </div>
+
         <div class="bulletin-board">
-            <!-- 申請文件類 -->
-            <h2>申請文件類</h2>
             <div class="post">
-                <h2 id="doc1" onclick="toggleAnswer('doc1Answer'); trackClick('Doc 1')">Q1.需要提供哪些申請文件？</h2>
-                <p id="doc1Answer">需要提供立案證明、營業稅或所得稅納稅證明等文件。詳細請參考<a href="https://www.cisanet.org.tw/Project/Detail/1165">申請須知</a>中的相關內容。</p>
-            </div>
-            <div class="post">
-                <h2 id="doc2" onclick="toggleAnswer('doc2Answer'); trackClick('Doc 2')">Q2.申請文件是否可以補件？</h2>
-                <p id="doc2Answer">可以在申請截止日前補件，逾期補件將不受理。</p>
-            </div>
-
-            <!-- 審查資格類 -->
-            <h2>審查資格類</h2>
-            <div class="post">
-                <h2 id="qual1" onclick="toggleAnswer('qual1Answer'); trackClick('Qual 1')">Q1.哪些企業具備申請資格？</h2>
-                <p id="qual1Answer">符合中小企業認定標準的企業、公私立大專校院及法人組織均具備資格。</p>
-            </div>
-            <div class="post">
-                <h2 id="qual2" onclick="toggleAnswer('qual2Answer'); trackClick('Qual 2')">Q2.若曾參與其他計畫，是否能申請？</h2>
-                <p id="qual2Answer">可以，但若連續兩年參與經濟部中小企業相關計畫，則不符合資格。</p>
-            </div>
-
-            <!-- 作業流程類 -->
-            <h2>作業流程類</h2>
-            <div class="post">
-                <h2 id="proc1" onclick="toggleAnswer('proc1Answer'); trackClick('Proc 1')">Q1.提案流程是什麼？</h2>
-                <p id="proc1Answer">請至提案系統完成線上繳件，包含上傳計畫書及應備文件。</p>
-            </div>
-            <div class="post">
-                <h2 id="proc2" onclick="toggleAnswer('proc2Answer'); trackClick('Proc 2')">Q2.審查流程如何進行？</h2>
-                <p id="proc2Answer">審查分為初審與複審，依評分標準進行審查並通知結果。</p>
+                <h5 style="margin-top: -5px;">申請文件類</h5>
+                <div class="post">
+                    <h2 id="question1" onclick="toggleAnswer('answer1'); trackClick('Question 1')">Q1.若同一個資訊服務方案(工具)但有不同價格與服務內容差異，是否可以寫進同一張申請書？</h2>
+                    <p id="answer1" style="display: none;">關於應附資料中的「附表2：雲端服務方案申請書」為一個方案填寫一份申請書，若貴公司上架的工具有不同版本規格或價格的差異，需分開填寫，並在對應表單中詳述規格內容，避免上架資訊有誤。
+                    </p>
+                </div>
+                <div class="post">
+                    <h2 id="question2" onclick="toggleAnswer('answer2'); trackClick('Question 2')">Q2.關於「合法納稅證明文件」，公司可以提供什麼資料？</h2>
+                    <p id="answer2" style="display: none;">如：營業人銷售額與稅額申報書(401表)、國稅局營業稅繳款書、納稅義務人違章欠稅查復表(無欠稅證明)等，可佐證公司納稅紀錄之相關文件皆可。
+                    </p>
+                </div>
+                <div class="post">
+                    <h2 id="question3" onclick="toggleAnswer('answer3'); trackClick('Question 3')">Q3.若公司所上架的資訊工具能因應不同的方案類別需求，且也可適用於不同產業，則表單中該選項是否可複選？</h2>
+                    <p id="answer3" style="display: none;">表單中有類別選項可以複選。
+                    </p>
+                </div>
+                <div class="post">
+                    <h2 id="question4" onclick="toggleAnswer('answer4'); trackClick('Question 4')">Q4.資料中需提供的方案圖示有什麼限制？</h2>
+                    <p id="answer4" style="display: none;">可提供方案示意圖、公司Logo或方案說明介紹相關視覺圖片等，並另以附件方式提供圖檔，檔案格式為jpg或png皆可，並符合尺寸限制1000*409 px的規範。<br>
+                        一個工具方案請以提供一張代表圖示為主，若有同工具但僅為價格與規格內容差異，也可使用同一張圖式。
+                    </p>
+                </div>
+                <div class="post">
+                    <h2 id="question5" onclick="toggleAnswer('answer5'); trackClick('Question 5')">Q5.「附表2：雲端服務方案申請書』中的【註冊連結】欄位，是否可以填公司官網首頁？</h2>
+                    <p id="answer5" style="display: none;">屆時平台進行方案上架作業時，為能串接API相關資料，使中小企業至貴公司註冊使用工具方案的紀錄能回傳平台，需串接的網址並非公司官網首頁，而是需請貴公司為此方案建置並提供單獨的方案下單連結或註冊連結，以利建置中繼頁面。
+                    </p>
+                </div>
+                <div class="post">
+                    <h5 style="margin-top: -5px;">審查資格類</h5>
+                </div>
+                <div class="post">
+                    <h2 id="question6" onclick="toggleAnswer('answer6'); trackClick('Question 6')">Q6.關於計畫書內職級的部分該如何填寫?</h2>
+                    <p id="answer6" style="display: none;">請提案單位計畫人力依學歷經驗去做職級區分，相關職級表請參考<a href="https://drive.google.com/file/d/1jkVuMxLb3mLHepsYB2JIh1UPXy0Ce7ef/view?usp=sharing">人事費職級與編列原則</a>填寫。<br>
+                    </p>
+                </div>
+                <div class="post">
+                    <h2 id="question7" onclick="toggleAnswer('answer7'); trackClick('Question 7')">Q7.預算核定流程為何?</h2>
+                    <p id="answer7" style="display: none;">申請入案通過後即核定預算，主要分三期款核撥，簽約後核撥第一期款(經費30%)，期中審查撥第二期款(經費30%)，期末審查通過核撥第三期款(經費40%)。</p>
+                </div>
+                <div class="post">
+                    <h2 id="question8" onclick="toggleAnswer('answer8'); trackClick('Question 8')">Q8.同一間公司是否可以同時申請『綠色通關』與『擴大申請』兩種不同類別方案？</h2>
+                    <p id="answer8" style="display: none;">可以。若該資訊服務業者有多種工具方案可提供服務及選購，可依照該工具方案的類型(是否上架過臺灣雲市集)來各自以對應類別提出申請。</p>
+                </div>
+                <div class="post">
+                    <h5 style="margin-top: -5px;">作業流程類</h5>
+                </div>
+                <div class="post">
+                    <h2 id="question9" onclick="toggleAnswer('answer9'); trackClick('Question 9')">Q9.申請文件寄出後如何判別是否申請成功？後續作業流程是否會通知與說明？</h2>
+                    <p id="answer9" style="display: none;">將申請文件與相關附件一同寄送到指定報名信箱後，審查小組將會於1-3天內以信件方式回覆收件成功，即可認定完成申請作業；若有需補件項目或是審查通過將進行上架作業等，各階段說明皆會以信件通知。亦或者可利用官方LINE@查訊目前審查進度。<br>
+                    </p>
+                </div>
+                <div class="post">
+                    <h2 id="question10" onclick="toggleAnswer('answer10'); trackClick('Question 10')">Q10.公司送出申請後，若後續發現資料表或申請書等相關文件內容有需修正或補充的部分，是否還能進行變更？</h2>
+                    <p id="answer10" style="display: none;">在符合申請受理的期限內，若該資訊服務業者有修改申請文件的需求，請重新將修正後的定案文件再次寄送到報名信箱，並於信件中說明此次修改的原因與內容，審查小組將會以收件紀錄之時間認定，將該資訊服務業者最新的送件資料視為主要申請文件。</p>
+                </div>
+                <div class="post">
+                    <h2 id="question11" onclick="toggleAnswer('answer11'); trackClick('Question 11')">Q11.送件申請後，若資格符合，後續串接API作業會如何進行？</h2>
+                    <p id="answer11" style="display: none;">審查小組於收到送件申請資料後，將會進行相關書面資格審查（擴大招募類須另有相關技術審查），確認該方案符合上架資格且上架資訊正確後，會先將對應方案上架放至平台頁面 （此時尚未串接ＡＰＩ），接續提供給該資訊服務業者相關ＡＰＩ文件與說明，執行介接與建置中繼站網頁，並安排專人為您提供協助，經後續測試，確認使用端在註冊頁面完成註冊時，資料可以順利傳回ＳＭＥＡＩ平台ＡＰＩ後，才算正式串接與上架成功，即算正式啟用該平台並能順利提供服務選購。</p>
+                </div>
+                <div class="post">
+                    <h4>Q&A提供簡易答覆，若對於上架有任何問題，請您透過LINE@進行詢問，將會有專員協助您解決。</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -183,14 +209,21 @@
     <script>
         function toggleAnswer(answerId) {
             var answer = document.getElementById(answerId);
-            answer.classList.toggle('active');
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
         }
+    </script>
 
+    <script>
+        // JavaScript函數，用於追蹤點擊事件
         function trackClick(question) {
-            gtag('event', 'click', {
-                'event_category': 'QA Interaction',
-                'event_label': question
-            });
+        gtag('event', 'click', {
+            'event_category': 'QA Click',
+            'event_label': question
+        });
         }
     </script>
 </body>
