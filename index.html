@@ -119,85 +119,70 @@
 
 <body>
     <div class="container">
-        <div class="bulletin-board">
-            <div class="postt">
-                <h3>AI轉型資源說明會線上版</h3>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fcisa365%2Fvideos%2F378742211784674%2F&show_text=false&width=560&t=0"
-                        width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                        allowFullScreen="true">
-                    </iframe>
-                </div>
-            </div>
-        </div>
 
         <div id="header">
-            <h1>上架SMEAI平台常見Q&A</h1>
+            <h1>上架SME AI平台常見Q&A</h1>
         </div>
 
         <div class="bulletin-board">
             <div class="post">
                 <h5 style="margin-top: -5px;">申請文件類</h5>
                 <div class="post">
-                    <h2 id="question1" onclick="toggleAnswer('answer1'); trackClick('Question 1')">Q1.若同一個資訊服務方案(工具)但有不同價格與服務內容差異，是否可以寫進同一張申請書？</h2>
-                    <p id="answer1" style="display: none;">關於應附資料中的「附表2：雲端服務方案申請書」為一個方案填寫一份申請書，若貴公司上架的工具有不同版本規格或價格的差異，需分開填寫，並在對應表單中詳述規格內容，避免上架資訊有誤。
+                    <h2 id="question1-1" onclick="toggleAnswer('answer1-1'); trackClick('Question1-1')">Q1.若同一個資訊服務方案(工具)但有不同價格與服務內容差異，是否可以寫進同一張申請書？</h2>
+                    <p id="answer1-1" style="display: none;">關於應附資料中的「附表2：雲端服務方案申請書」為一個方案填寫一份申請書，若貴公司上架的工具有不同版本規格或價格的差異，需分開填寫，並在對應表單中詳述規格內容，避免上架資訊有誤。
                     </p>
                 </div>
                 <div class="post">
-                    <h2 id="question2" onclick="toggleAnswer('answer2'); trackClick('Question 2')">Q2.關於「合法納稅證明文件」，公司可以提供什麼資料？</h2>
-                    <p id="answer2" style="display: none;">如：營業人銷售額與稅額申報書(401表)、國稅局營業稅繳款書、納稅義務人違章欠稅查復表(無欠稅證明)等，可佐證公司納稅紀錄之相關文件皆可。
+                    <h2 id="question1-2" onclick="toggleAnswer('answer1-2'); trackClick('Question1-2')">Q2.關於「合法納稅證明文件」，公司可以提供什麼資料？</h2>
+                    <p id="answer1-2" style="display: none;">如：營業人銷售額與稅額申報書(401表)、國稅局營業稅繳款書、納稅義務人違章欠稅查復表(無欠稅證明)等，可佐證公司納稅紀錄之相關文件皆可。
                     </p>
                 </div>
                 <div class="post">
-                    <h2 id="question3" onclick="toggleAnswer('answer3'); trackClick('Question 3')">Q3.若公司所上架的資訊工具能因應不同的方案類別需求，且也可適用於不同產業，則表單中該選項是否可複選？</h2>
-                    <p id="answer3" style="display: none;">表單中有類別選項可以複選。
+                    <h2 id="question1-[3" onclick="toggleAnswer('answer1-3'); trackClick('Question1-3')">Q3.若公司所上架的資訊工具能因應不同的方案類別需求，且也可適用於不同產業，則表單中該選項是否可複選？</h2>
+                    <p id="answer1-3" style="display: none;">表單中有類別選項可以複選。
                     </p>
                 </div>
                 <div class="post">
-                    <h2 id="question4" onclick="toggleAnswer('answer4'); trackClick('Question 4')">Q4.資料中需提供的方案圖示有什麼限制？</h2>
-                    <p id="answer4" style="display: none;">可提供方案示意圖、公司Logo或方案說明介紹相關視覺圖片等，並另以附件方式提供圖檔，檔案格式為jpg或png皆可，並符合尺寸限制1000*409 px的規範。<br>
-                        一個工具方案請以提供一張代表圖示為主，若有同工具但僅為價格與規格內容差異，也可使用同一張圖式。
-                    </p>
+                    <h2 id="question1-4" onclick="toggleAnswer('answer1-4'); trackClick('Question1-4')">Q4.資料中需提供的方案圖示有什麼限制？</h2>
+                    <p id="answer1-4" style="display: none;">可提供方案示意圖、公司Logo或方案說明介紹相關視覺圖片等，並另以附件方式提供圖檔，檔案格式為jpg或png皆可，並符合尺寸限制1000*409px的規範，一個工具方案請以提供一張代表圖示為主，若有同工具但僅為價格與規格內容差異，也可使用同一張圖式。</p>
                 </div>
                 <div class="post">
-                    <h2 id="question5" onclick="toggleAnswer('answer5'); trackClick('Question 5')">Q5.「附表2：雲端服務方案申請書』中的【註冊連結】欄位，是否可以填公司官網首頁？</h2>
-                    <p id="answer5" style="display: none;">屆時平台進行方案上架作業時，為能串接API相關資料，使中小企業至貴公司註冊使用工具方案的紀錄能回傳平台，需串接的網址並非公司官網首頁，而是需請貴公司為此方案建置並提供單獨的方案下單連結或註冊連結，以利建置中繼頁面。
+                    <h2 id="question1-5" onclick="toggleAnswer('answer1-5'); trackClick('Question1-5')">Q5.「附表2：雲端服務方案申請書』中的【註冊連結】欄位，是否可以填公司官網首頁？</h2>
+                    <p id="answer1-5" style="display: none;">屆時平台進行方案上架作業時，為能串接ＡＰＩ相關資料，使中小企業至貴公司註冊使用工具方案的紀錄能回傳平台，需串接的網址並非公司官網首頁，而是需請貴公司為此方案建置並提供單獨的方案下單連結或註冊連結，以利建置中繼頁面。
                     </p>
                 </div>
+
                 <div class="post">
                     <h5 style="margin-top: -5px;">審查資格類</h5>
                 </div>
                 <div class="post">
-                    <h2 id="question6" onclick="toggleAnswer('answer6'); trackClick('Question 6')">Q6.關於計畫書內職級的部分該如何填寫?</h2>
-                    <p id="answer6" style="display: none;">請提案單位計畫人力依學歷經驗去做職級區分，相關職級表請參考<a href="https://drive.google.com/file/d/1jkVuMxLb3mLHepsYB2JIh1UPXy0Ce7ef/view?usp=sharing">人事費職級與編列原則</a>填寫。<br>
-                    </p>
+                    <h2 id="question2-1" onclick="toggleAnswer('answer2-1'); trackClick('Question2-1')">Q1.若過去曾經上架過臺灣雲市集，但因合約規範或服務期限等因素，現已終止或下架，此次是否還能以『綠色通關』類別來申請新平台？</h2>
+                    <p id="answer2-1" style="display: none;">可以。可提供該方案上架過雲市集的頁面截圖，或是相關合約內容等佐證資料，以利審查小組能檢核內容規格與價格等條件是否相符。</p>
                 </div>
                 <div class="post">
-                    <h2 id="question7" onclick="toggleAnswer('answer7'); trackClick('Question 7')">Q7.預算核定流程為何?</h2>
-                    <p id="answer7" style="display: none;">申請入案通過後即核定預算，主要分三期款核撥，簽約後核撥第一期款(經費30%)，期中審查撥第二期款(經費30%)，期末審查通過核撥第三期款(經費40%)。</p>
+                    <h2 id="question2-2" onclick="toggleAnswer('answer2-2'); trackClick('Question2-2')">Q2.是否只要公司有任何工具曾上架過臺灣雲市集，在此次申請作業中，該公司任何方案都能以『綠色通關』來申請？</h2>
+                    <p id="answer2-2" style="display: none;">不行。因為此申請分類是依據「申請方案」為單位來進行審查，並非以「公司單位」來判別，若該方案為資訊服務業者過去未上架推出過的新工具方案，此次須以『擴大招募』類進行申請，並提供完整服務方案相關技術特性說明文件，後續將另外針對此新方案進行相關技術審查。</p>
                 </div>
                 <div class="post">
-                    <h2 id="question8" onclick="toggleAnswer('answer8'); trackClick('Question 8')">Q8.同一間公司是否可以同時申請『綠色通關』與『擴大申請』兩種不同類別方案？</h2>
-                    <p id="answer8" style="display: none;">可以。若該資訊服務業者有多種工具方案可提供服務及選購，可依照該工具方案的類型(是否上架過臺灣雲市集)來各自以對應類別提出申請。</p>
+                    <h2 id="question2-3" onclick="toggleAnswer('answer2-3'); trackClick('Question2-3')">Q3.同一間公司是否可以同時申請『綠色通關』與『擴大申請』兩種不同類別方案？</h2>
+                    <p id="answer2-3" style="display: none;">可以。若該資訊服務業者有多種工具方案可提供服務及選購，可依照該工具方案的類型(是否上架過臺灣雲市集)來各自以對應類別提出申請。</p>
                 </div>
+
                 <div class="post">
                     <h5 style="margin-top: -5px;">作業流程類</h5>
                 </div>
                 <div class="post">
-                    <h2 id="question9" onclick="toggleAnswer('answer9'); trackClick('Question 9')">Q9.申請文件寄出後如何判別是否申請成功？後續作業流程是否會通知與說明？</h2>
-                    <p id="answer9" style="display: none;">將申請文件與相關附件一同寄送到指定報名信箱後，審查小組將會於1-3天內以信件方式回覆收件成功，即可認定完成申請作業；若有需補件項目或是審查通過將進行上架作業等，各階段說明皆會以信件通知。亦或者可利用官方LINE@查訊目前審查進度。<br>
+                    <h2 id="question3-1" onclick="toggleAnswer('answer3-1'); trackClick('Question3-1')">Q1.申請文件寄出後如何判別是否申請成功？後續作業流程是否會通知與說明？</h2>
+                    <p id="answer3-1" style="display: none;">將申請文件與相關附件一同寄送到指定報名信箱後，審查小組將會於1-3天內以信件方式回覆收件成功，即可認定完成申請作業；若有需補件項目或是審查通過將進行上架作業等，各階段說明皆會以信件通知，亦或者可利用官方LINE@查訊目前審查進度。<br>
                     </p>
                 </div>
                 <div class="post">
-                    <h2 id="question10" onclick="toggleAnswer('answer10'); trackClick('Question 10')">Q10.公司送出申請後，若後續發現資料表或申請書等相關文件內容有需修正或補充的部分，是否還能進行變更？</h2>
-                    <p id="answer10" style="display: none;">在符合申請受理的期限內，若該資訊服務業者有修改申請文件的需求，請重新將修正後的定案文件再次寄送到報名信箱，並於信件中說明此次修改的原因與內容，審查小組將會以收件紀錄之時間認定，將該資訊服務業者最新的送件資料視為主要申請文件。</p>
+                    <h2 id="question3-2" onclick="toggleAnswer('answer3-2'); trackClick('Question3-2')">Q2.公司送出申請後，若後續發現資料表或申請書等相關文件內容有需修正或補充的部分，是否還能進行變更？</h2>
+                    <p id="answer3-2" style="display: none;">在符合申請受理的期限內，若該資訊服務業者有修改申請文件的需求，請重新將修正後的定案文件再次寄送到報名信箱，並於信件中說明此次修改的原因與內容，審查小組將會以收件紀錄之時間認定，將該資訊服務業者最新的送件資料視為主要申請文件。</p>
                 </div>
                 <div class="post">
-                    <h2 id="question11" onclick="toggleAnswer('answer11'); trackClick('Question 11')">Q11.送件申請後，若資格符合，後續串接API作業會如何進行？</h2>
-                    <p id="answer11" style="display: none;">審查小組於收到送件申請資料後，將會進行相關書面資格審查（擴大招募類須另有相關技術審查），確認該方案符合上架資格且上架資訊正確後，會先將對應方案上架放至平台頁面 （此時尚未串接ＡＰＩ），接續提供給該資訊服務業者相關ＡＰＩ文件與說明，執行介接與建置中繼站網頁，並安排專人為您提供協助，經後續測試，確認使用端在註冊頁面完成註冊時，資料可以順利傳回ＳＭＥＡＩ平台ＡＰＩ後，才算正式串接與上架成功，即算正式啟用該平台並能順利提供服務選購。</p>
+                    <h2 id="question3-3" onclick="toggleAnswer('answer3-3'); trackClick('Question3-3')">Q3.送件申請後，若資格符合，後續串接ＡＰＩ作業會如何進行？</h2>
+                    <p id="answer3-3" style="display: none;">審查小組於收到送件申請資料後，將會進行相關書面資格審查（擴大招募類須另有相關技術審查），確認該方案符合上架資格且上架資訊正確後，會先將對應方案上架放至平台頁面 （此時尚未串接ＡＰＩ），接續提供給該資訊服務業者相關ＡＰＩ文件與說明，執行介接與建置中繼站網頁，並安排專人為您提供協助，經後續測試，確認使用端在註冊頁面完成註冊時，資料可以順利傳回ＳＭＥＡＩ平台ＡＰＩ後，才算正式串接與上架成功，即算正式啟用該平台並能順利提供服務選購。</p>
                 </div>
                 <div class="post">
                     <h4>Q&A提供簡易答覆，若對於上架有任何問題，請您透過LINE@進行詢問，將會有專員協助您解決。</h4>
