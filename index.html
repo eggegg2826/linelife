@@ -1,7 +1,7 @@
 <html lang="zh-TW"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI產業課程</title>
+    <title>提升中小企業智慧化經營效能計畫</title>
     <style>
         /* 基礎樣式設定 */
         * {
@@ -47,6 +47,15 @@
             color: rgba(255,255,255,0.9);
             font-size: 1.5rem;
             font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin: 0 0 15px 0;
+        }
+
+        /* 產業標題樣式 */
+        .industry-title {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.2rem;
+            font-weight: bold;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
             margin: 0;
         }
@@ -115,6 +124,7 @@
             padding: 20px 25px;
             border-bottom: 1px solid #e9ecef;
             transition: background-color 0.3s ease;
+            position: relative;
         }
 
         .lesson-item:hover {
@@ -124,25 +134,19 @@
 
         /* 已完課課堂樣式 */
         .lesson-item.completed {
-            background-color: #f5f5f5;
+            background-color: #e9e9e9;
             cursor: default;
             opacity: 0.7;
         }
 
         .lesson-item.completed:hover {
-            background-color: #f5f5f5;
-            transform: none;
+            background-color: #e9e9e9;
+            cursor: default ;
+            transform: none ;
         }
 
         .lesson-item.completed .lesson-title {
             color: #6c757d;
-        }
-
-        .lesson-item.completed .lesson-title::after {
-            content: " ✓ 已完課";
-            color: #28a745;
-            font-weight: normal;
-            font-size: 0.9rem;
         }
 
         .lesson-item:last-child {
@@ -213,6 +217,48 @@
             border: 1px solid #e1bee7;
         }
 
+        .completed-badge {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            cursor: default;
+            z-index: 10;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            pointer-events: none; /* 不可點擊 */
+        }
+
+        /* 報名標籤樣式 */
+        .register-label {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            pointer-events: none; /* 不可點擊 */
+        }
+
+        .register-label:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+            background: linear-gradient(135deg, #fb8c00 0%, #ef6c00 100%);
+        }
+
         /* 開發人員按鈕樣式 */
         .developer-button {
             position: fixed;
@@ -248,8 +294,13 @@
                 font-size: 1.2rem;
             }
 
+            .industry-title {
+                font-size: 1rem;
+            }
+
             .title-section {
                 padding: 15px;
+                text-align: left;
             }
 
             .course-button {
@@ -280,19 +331,20 @@
     <div class="container">
         <!-- 頁面標題區域 -->
         <div class="title-section">
-            <h1 class="main-title">AISpace</h1>
+            <h1 class="main-title">AIspace</h1>
             <h2 class="sub-title">提升中小企業智慧化經營效能計畫</h2>
         </div>
 
         <!-- 課程列表 -->
         <div class="course-list">
-            <!-- 課程1：AI基礎應用 -->
+             <!-- 課程1：AI基礎應用 -->
             <button class="course-button" onclick="toggleCourse('course1')">
                 <span>AI工具機智慧製造與AI應用(金屬加工用機械設備製造業)</span>
                 <span class="toggle-icon">▼</span>
             </button>
             <div class="course-content" id="course1">
                 <div class="lesson-item completed">
+                    <span class="completed-badge">✓ 已完課</span>
                     <div class="lesson-title">第一梯次</div>
                     <div class="lesson-info">
                         <div class="info-group">
@@ -317,6 +369,7 @@
                 </div>
                 
                 <div class="lesson-item" onclick="openLesson('https://forms.gle/8sRwUHPL8j8KEbgF7')">
+                    <span class="register-label" onclick="event.stopPropagation(); registerForLesson('機器學習實務應用')">📝 可報名</span>
                     <div class="lesson-title">第二梯次</div>
                     <div class="lesson-info">
                         <div class="info-group">
@@ -341,6 +394,7 @@
                 </div>
 
                 <div class="lesson-item" onclick="openLesson('https://forms.gle/8sRwUHPL8j8KEbgF7')">
+                    <span class="register-label" onclick="event.stopPropagation(); registerForLesson('機器學習實務應用')">📝 可報名</span>
                     <div class="lesson-title">第三梯次</div>
                     <div class="lesson-info">
                         <div class="info-group">
@@ -372,6 +426,7 @@
             </button>
             <div class="course-content" id="course2">
                 <div class="lesson-item completed">
+                    <span class="completed-badge">✓ 已完課</span>
                     <div class="lesson-title">第一梯次</div>
                     <div class="lesson-info">
                         <div class="info-group">
@@ -396,6 +451,7 @@
                 </div>
 
                 <div class="lesson-item" onclick="openLesson('https://www.smelearning.org.tw/co_unit_index.php?tr_as_id=1555')">
+                    <span class="register-label" onclick="event.stopPropagation(); registerForLesson('機器學習實務應用')">📝 可報名</span>
                     <div class="lesson-title">第二梯次</div>
                     <div class="lesson-info">
                         <div class="info-group">
@@ -420,6 +476,7 @@
                 </div>
 
                 <div class="lesson-item" onclick="openLesson('https://www.smelearning.org.tw/co_unit_index.php?tr_as_id=1555')">
+                    <span class="register-label" onclick="event.stopPropagation(); registerForLesson('機器學習實務應用')">📝 可報名</span>
                     <div class="lesson-title">第三梯次</div>
                     <div class="lesson-info">
                         <div class="info-group">
@@ -443,11 +500,12 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
+        </div>
+    </div>
+    
     <script>
         // 課程展開/收合功能
         function toggleCourse(courseId) {
@@ -478,6 +536,11 @@
         function openLesson(url) {
             // 在新視窗開啟課堂連結
             window.open(url, '_blank');
+        }
+
+        // 課程報名功能
+        function registerForLesson(lessonName) {
+            alert(`您已點擊報名：${lessonName}\n\n此為示範功能，實際使用時可連接到報名系統。`);
         }
 
         // 處理已完課項目點擊
@@ -644,4 +707,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959ce0a3d4cb8f18',t:'MTc1MTYxMzgwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959d733c81538288',t:'MTc1MTYxOTgxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
