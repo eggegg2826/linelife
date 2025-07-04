@@ -300,12 +300,16 @@
 
             .title-section {
                 padding: 15px;
-                text-align: left;
+                text-align: center;
             }
 
-            .course-button {
-                padding: 15px 20px;
-                font-size: 1.1rem;
+            .course-button > span:first-child {
+                text-align: left;
+                flex: 1;
+            }
+
+            .course-button .toggle-icon {
+                text-align: right;
             }
 
             .lesson-info {
@@ -339,7 +343,7 @@
         <div class="course-list">
              <!-- 課程1：AI基礎應用 -->
             <button class="course-button" onclick="toggleCourse('course1')">
-                <span>AI工具機智慧製造與AI應用(金屬加工用機械設備製造業)</span>
+                <span>AI工具機智慧製造與AI應用</span>
                 <span class="toggle-icon">▼</span>
             </button>
             <div class="course-content" id="course1">
@@ -421,7 +425,7 @@
 
             <!-- 課程2：數位轉型 -->
             <button class="course-button" onclick="toggleCourse('course2')">
-                <span>AI在車用零組件製造的應用(車用零組件製造業)</span>
+                <span>AI在車用零組件製造的應用</span>
                 <span class="toggle-icon">▼</span>
             </button>
             <div class="course-content" id="course2">
